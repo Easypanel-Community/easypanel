@@ -1,5 +1,6 @@
 {
   "name": "playground",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "author": "",
@@ -7,9 +8,11 @@
   "keywords": [],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "esno index.ts"
   },
   "devDependencies": {
-    "easypanel": "workspace:^"
+    "dotenv": "^16.3.1",
+    "easypanel": "workspace:^",
+    "esno": "^4.0.0"
   }
 }

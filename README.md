@@ -9,6 +9,24 @@
 pnpm install easypanel
 ```
 
+## Development
+
+Requires [pnpm](https://pnpm.js.org/) >= 8.10.0
+Requires [node](https://nodejs.org/en/) >= 20.0.0
+
+```bash
+pnpm install
+pnpm dev # watch mode tsup
+pnpm build # build
+```
+
+### Playground
+
+```bash
+cd playground
+pnpm install
+pnpm dev # send requests and close
+```
 
 ## Sponsors
 
@@ -21,4 +39,4 @@ pnpm install easypanel
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+MIT License © 2023-PRESENT [productdevbook](https://github.com/productdevbook)
