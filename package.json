@@ -1,7 +1,7 @@
 {
   "name": "easypanel",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "pnpm@8.10.0",
   "description": "EasyPanel is Next Generation Server Control Panel",
   "author": "Mehmet - hi@productdevbook.com",
