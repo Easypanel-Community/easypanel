@@ -1,10 +1,10 @@
 {
   "name": "easypanel",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@8.10.0",
-  "description": "add description",
-  "author": "add author",
+  "description": "EasyPanel is Next Generation Server Control Panel",
+  "author": "Mehmet - hi@productdevbook.com",
   "license": "MIT",
   "funding": "https://github.com/sponsors/productdevbook",
   "homepage": "https://github.com/productdevbookcom/easypanel",
