@@ -38,7 +38,7 @@ importers:
 
   playground:
     devDependencies:
-      ts-bundle-template:
+      easypanel:
         specifier: workspace:^
         version: link:..
 
