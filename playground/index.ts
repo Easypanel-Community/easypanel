@@ -1,6 +1,19 @@
-import { handler } from 'ts-bundle-template'
+import { easypanel } from 'easypanel'
+import { config } from 'dotenv'
 
-handler('test', 'test', (err: any, result: any) => {
-  // eslint-disable-next-line no-console
-  console.log(err, result)
+config()
+
+const app = easypanel({
+  url: process.env.EASYPANEL_URL || '',
+  auth: {
+    email: process.env.EASYPANEL_EMAIL || '',
+    password: process.env.EASYPANEL_PASSWORD || '',
+  },
+})
+
+await app.login()
+
+await app.createService({
+  projectName: 'projects',
+  serviceName: 'xxx',
 })

@@ -7,5 +7,8 @@ export default antfu(
       'dist',
       '.github',
     ],
+    rules: {
+      'node/prefer-global/process': 'off',
+    },
   },
 )
