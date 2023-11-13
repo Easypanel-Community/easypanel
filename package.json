@@ -1,20 +1,22 @@
 {
-  "name": "ts-bundle-template",
+  "name": "easypanel",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@8.10.0",
   "description": "add description",
   "author": "add author",
   "license": "MIT",
   "funding": "https://github.com/sponsors/productdevbook",
-  "homepage": "https://github.com/productdevbookcom/ts-bundle-template",
+  "homepage": "https://github.com/productdevbookcom/easypanel",
   "repository": {
     "type": "git",
-    "url": "https://github.com/productdevbookcom/ts-bundle-template.git"
+    "url": "https://github.com/productdevbookcom/easypanel.git"
   },
-  "bugs": "https://github.com/productdevbookcom/ts-bundle-template/issues",
+  "bugs": "https://github.com/productdevbookcom/easypanel/issues",
   "keywords": [
-    "add keywords"
+    "easypanel",
+    "typescript easypanel",
+    "easypanel api"
   ],
   "exports": {
     ".": {
