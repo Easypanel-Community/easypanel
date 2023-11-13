@@ -1,0 +1,66 @@
+{
+  "name": "ts-bundle-template",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.10.0",
+  "description": "add description",
+  "author": "add author",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/productdevbook",
+  "homepage": "https://github.com/productdevbookcom/ts-bundle-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/productdevbookcom/ts-bundle-template.git"
+  },
+  "bugs": "https://github.com/productdevbookcom/ts-bundle-template/issues",
+  "keywords": [
+    "add keywords"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "pnpm run build",
+    "release": "pnpm build && bumpp --commit --push --tag && pnpm publish",
+    "lint": "eslint . && pnpm typecheck",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "1.1.1",
+    "@vitest/coverage-v8": "^0.34.6",
+    "bumpp": "^9.2.0",
+    "eslint": "^8.53.0",
+    "lint-staged": "^15.1.0",
+    "simple-git-hooks": "^2.9.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "pnpm eslint . --fix"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
