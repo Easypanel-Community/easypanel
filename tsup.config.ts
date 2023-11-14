@@ -1,10 +1,10 @@
 import type { Options } from 'tsup'
 
-// import pkg from './package.json'
+import pkg from './package.json'
 
-// const external = [
-//   ...Object.keys(pkg.dependencies || {}),
-// ]
+const external = [
+  ...Object.keys(pkg.dependencies || {}),
+]
 
 export default <Options>{
   entryPoints: ['src/index.ts'],
@@ -14,5 +14,5 @@ export default <Options>{
   clean: true,
   dts: true,
   minify: true,
-  // external,
+  external,
 }
