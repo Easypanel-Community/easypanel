@@ -45,7 +45,7 @@ importers:
       dotenv:
         specifier: ^16.3.1
         version: 16.3.1
-      easypanel:
+      easypanel-sdk:
         specifier: workspace:^
         version: link:..
       esno:

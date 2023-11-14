@@ -1,19 +1,23 @@
-# Easypanel Api
+# Easypanel SDK
 
-[easypanel](https://easypanel.io)
+<span><a href="https://www.npmjs.com/package/easypanel-sdk "><img src="https://img.shields.io/npm/v/easypanel-sdk?style=flat&colorA=18181B&colorB=28CF8D" alt="Version"></a> </span> | <span> <a href="https://www.npmjs.com/package/easypanel-sdk"> <img src="https://img.shields.io/npm/dm/easypanel-sdk?style=flat&colorA=18181B&colorB=28CF8D" alt="Downloads"> </a> </span>
+
+[easypanel](https://easypanel.io) - This is an unofficial sdk for Easypanel.
 
 
 ## Installation
 
 ```bash
-pnpm install easypanel
+pnpm install easypanel-sdk
+yarn add easypanel-sdk
+npm install easypanel-sdk
 ```
 
 
 ## Usage
 
 ```ts
-import { easypanel } from 'easypanel'
+import { easypanel } from 'easypanel-sdk'
 import { config } from 'dotenv'
 
 config()

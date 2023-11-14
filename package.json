@@ -1,5 +1,5 @@
 {
-  "name": "easypanel",
+  "name": "easypanel-sdk",
   "type": "module",
   "version": "0.0.3",
   "packageManager": "pnpm@8.10.0",
@@ -16,7 +16,8 @@
   "keywords": [
     "easypanel",
     "typescript easypanel",
-    "easypanel api"
+    "easypanel api",
+    "easypanel-sdk"
   ],
   "exports": {
     ".": {
