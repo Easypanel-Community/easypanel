@@ -1,4 +1,4 @@
-import { easypanel } from 'easypanel'
+import { easypanel } from 'easypanel-sdk'
 import { config } from 'dotenv'
 
 config()
