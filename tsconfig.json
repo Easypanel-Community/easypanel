@@ -8,7 +8,7 @@
       "ESNext"
     ],
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "strict": true,
     "esModuleInterop": true,
