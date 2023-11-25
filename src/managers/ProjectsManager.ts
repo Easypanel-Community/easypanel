@@ -139,12 +139,17 @@ export async function EasyPanel(config: ClientConfig) {
   }
 }
 
-const test = await EasyPanel({
-  credentials: {
-    email: '',
-    password: '',
-  },
-  endpoint: '',
-})
+try {
+  const test = await EasyPanel({
+    credentials: {
+      email: '',
+      password: '',
+    },
+    endpoint: '',
+  })
 
-test.projects.create({ name: 'test' })
+  test.projects.create({ name: 'test' })
+}
+catch (error) {
+  console.log(error)
+}
