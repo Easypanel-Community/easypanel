@@ -1,4 +1,4 @@
-import type { ClientResponse, NoResponse, StringResponse } from '../typesNew'
+import type { ClientResponse, NoResponse, StringResponse } from '../types'
 import type {
   CreateService,
   DeployParams,
@@ -15,7 +15,7 @@ import type {
   UpdatePorts,
   UpdateRedirects,
   UpdateResources,
-} from '../typesNew/services'
+} from '../types/services'
 import { Routes } from '../utils/Routes'
 
 export function servicesManager({ get, post }: ClientResponse) {

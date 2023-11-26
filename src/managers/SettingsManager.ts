@@ -10,7 +10,7 @@ import type {
   PruneDockerDailyParams,
   StringResponse,
   TreafikConfParams,
-} from '../typesNew'
+} from '../types'
 import { Routes } from '../utils/Routes'
 
 export function settingsManager({ get, post }: ClientResponse) {

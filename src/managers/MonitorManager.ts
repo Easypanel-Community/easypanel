@@ -3,8 +3,8 @@ import type {
   ContainerStats,
   DockerTaskStats,
   SystemStats,
-} from '../typesNew/monitor'
-import type { ClientResponse } from '../typesNew'
+} from '../types/monitor'
+import type { ClientResponse } from '../types'
 import { Routes } from '../utils/Routes'
 
 export function monitorManager({ get }: ClientResponse) {

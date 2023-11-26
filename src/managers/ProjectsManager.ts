@@ -10,7 +10,7 @@ import type {
   Project,
   ProjectName,
   ProjectQueryConf,
-} from '../typesNew'
+} from '../types'
 
 export function projectsManager({ get, post }: ClientResponse) {
   async function canCreate() {
