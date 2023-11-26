@@ -23,19 +23,12 @@ import { config } from 'dotenv'
 config()
 
 const app = easypanel({
-  url: process.env.EASYPANEL_URL || '',
-  auth: {
-    email: process.env.EASYPANEL_EMAIL || '',
-    password: process.env.EASYPANEL_PASSWORD || '',
-  },
+  email: process.env.EASYPANEL_EMAIL || '',
+  password: process.env.EASYPANEL_PASSWORD || '',
 })
 
-await app.login()
-
-await app.createService({
-  projectName: 'projects',
-  serviceName: 'xxx',
-})
+const project = await app.projects.create({ name: 'NewProject' })
+console.warn(project)
 ```
 
 ## Development

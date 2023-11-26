@@ -1,4 +1,3 @@
-import { easypanel } from './client/easypanel'
+export { easypanel } from './client'
 
 export * from './types'
-export { easypanel }
