@@ -4,16 +4,9 @@ import { config } from 'dotenv'
 config()
 
 const app = easypanel({
-  url: process.env.EASYPANEL_URL || '',
-  auth: {
-    email: process.env.EASYPANEL_EMAIL || '',
-    password: process.env.EASYPANEL_PASSWORD || '',
-  },
+  endpoint: process.env.EASYPANEL_URL || '',
+  token: process.env.EASYPANEL_TOKEN || '',
 })
 
-await app.login()
-
-await app.createService({
-  projectName: 'projects',
-  serviceName: 'xxx',
-})
+const dd = await app.projects.create({ name: 'ttt' })
+console.warn(dd)

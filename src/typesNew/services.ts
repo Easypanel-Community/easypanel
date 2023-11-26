@@ -1,4 +1,4 @@
-import type { RestResponse } from './index.types'
+import type { RestResponse } from '.'
 
 export type ServiceType =
   | 'app'
@@ -137,6 +137,6 @@ export interface UpdateResources extends SelectService {
   }
 }
 
-export interface ServiceRes extends RestResponse {
-  data?: Service
-}
+export type ListServices = RestResponse<{
+  services: Service[]
+}>

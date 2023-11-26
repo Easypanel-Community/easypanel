@@ -1,2 +1,1 @@
-export * from './ProjectsManager.js'
-export * from './BaseManager.js'
+export * from './ProjectsManager'

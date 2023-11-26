@@ -2,7 +2,7 @@
  * Params
  */
 
-import type { RestResponse } from './index.types'
+import type { RestResponse } from '.'
 
 export interface ChangeCredentialsParams {
   email: string
@@ -35,10 +35,8 @@ export interface LetsEncryptParams {
 /**
  * Returns
  */
-export interface PanelDomainRes extends RestResponse {
-  data?: {
-    serveOnIp: boolean
-    panelDomain: string
-    defaultPanelDomain: string
-  }
-}
+export type ChangeCredentialsRes = RestResponse<{
+  serveOnIp: boolean
+  panelDomain: string
+  defaultPanelDomain: string
+}>

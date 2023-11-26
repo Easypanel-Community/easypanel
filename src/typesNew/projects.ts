@@ -17,32 +17,20 @@ export interface ProjectQueryConf {
   projectName: string
 }
 
-/**
- * Returns
- */
+export type CanCreate = RestResponse<{
+  canCreate: boolean
+}>
 
-export interface CanCreate extends RestResponse {
-  data?: boolean
-}
+export type Create = RestResponse<ProjectInfo>
 
-export interface Create extends RestResponse {
-  data?: ProjectInfo
-}
+export type Project = RestResponse<{
+  project: ProjectInfo
+  services: Service[]
+}>
 
-export interface Project extends RestResponse {
-  data?: {
-    project: ProjectInfo
-    services: Service[]
-  }
-}
+export type ListProjects = RestResponse<ProjectInfo[]>
 
-export interface ListProjects extends RestResponse {
-  data?: ProjectInfo[]
-}
-
-export interface ListWithServices extends RestResponse {
-  data?: {
-    projects: ProjectInfo[]
-    services: Service[]
-  }
-}
+export type ListWithServices = RestResponse<{
+  projects: ProjectInfo[]
+  services: Service[]
+}>

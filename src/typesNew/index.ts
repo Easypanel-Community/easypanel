@@ -1,13 +1,20 @@
+export interface ClientResponse {
+  get: <T>(route: string, body: any) => Promise<T>
+  post: <T>(route: string, body: any) => Promise<T>
+  token: string
+}
+
 export interface RestConfig {
   baseURL: string
   token: string
 }
 
-export interface RestResponse {
-  ok: boolean
-  status: number
-  statusText?: string
-  data?: object
+export interface RestResponse<T> {
+  result: {
+    data: {
+      json: T
+    }
+  }
 }
 
 export interface RestError {
@@ -24,37 +31,28 @@ export type * from './settings'
 
 export interface ClientConfig {
   endpoint: string
-  credentials: {
+  token: string
+  /**
+   * @deprecated Use `token` instead
+   */
+  credentials?: {
     email: string
     password: string
   }
-  token?: string
 }
 
-export interface NoResponse extends Omit<RestResponse, 'data'> {
-  data?: null
-}
+export type NoResponse = RestResponse<null>
 
-export interface StringResponse extends Omit<RestResponse, 'data'> {
-  data?: string
-}
+export type StringResponse = RestResponse<string>
 
-export interface BooleanResponse extends Omit<RestResponse, 'data'> {
-  data?: string
-}
+export type BooleanResponse = RestResponse<boolean>
 
-export interface LoginRes extends RestResponse {
-  data?: {
-    token: string
-  }
-}
+export interface LoginRes extends RestResponse<{ token: string }> {}
 
-export interface UserRes extends RestResponse {
-  data?: {
-    id: string
-    createdAt: string
-    email: string
-    admin: boolean
-    password: null
-  }
-}
+export interface UserRes extends RestResponse<{
+  id: string
+  createdAt: string
+  email: string
+  admin: boolean
+  password: null
+}> {}
