@@ -18,7 +18,7 @@ import type {
 } from '../typesNew/services'
 import { Routes } from '../utils/Routes'
 
-export function ServicesManager({ get, post }: ClientResponse) {
+export function servicesManager({ get, post }: ClientResponse) {
   /**
    * Creates a new service.
    */
