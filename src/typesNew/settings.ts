@@ -1,7 +1,3 @@
-/**
- * Params
- */
-
 import type { RestResponse } from '.'
 
 export interface ChangeCredentialsParams {
@@ -35,7 +31,7 @@ export interface LetsEncryptParams {
 /**
  * Returns
  */
-export type ChangeCredentialsRes = RestResponse<{
+export type PanelDomainRes = RestResponse<{
   serveOnIp: boolean
   panelDomain: string
   defaultPanelDomain: string
