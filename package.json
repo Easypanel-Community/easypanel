@@ -7,12 +7,12 @@
   "author": "Mehmet - hi@productdevbook.com",
   "license": "MIT",
   "funding": "https://github.com/sponsors/productdevbook",
-  "homepage": "https://github.com/productdevbookcom/easypanel",
+  "homepage": "https://productdevbook.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/productdevbookcom/easypanel.git"
+    "url": "https://github.com/Easypanel-Community/easypanel.git"
   },
-  "bugs": "https://github.com/productdevbookcom/easypanel/issues",
+  "bugs": "https://github.com/Easypanel-Community/easypanel/issues",
   "keywords": [
     "easypanel",
     "typescript easypanel",
