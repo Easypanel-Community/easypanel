@@ -48,8 +48,10 @@ export function easypanel(config: ClientConfig) {
   const resolvedClient = client(config)
 
   const projects = projectsManager(resolvedClient)
+  const services = projectsManager(resolvedClient)
 
   return {
     projects,
+    services,
   }
 }

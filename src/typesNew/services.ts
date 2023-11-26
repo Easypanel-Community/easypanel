@@ -137,6 +137,4 @@ export interface UpdateResources extends SelectService {
   }
 }
 
-export type ListServices = RestResponse<{
-  services: Service[]
-}>
+export type ServiceRes = RestResponse<Service>
