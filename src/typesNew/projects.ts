@@ -17,9 +17,7 @@ export interface ProjectQueryConf {
   projectName: string
 }
 
-export type CanCreate = RestResponse<{
-  canCreate: boolean
-}>
+export type CanCreate = RestResponse<boolean>
 
 export type Create = RestResponse<ProjectInfo>
 
