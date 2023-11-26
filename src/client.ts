@@ -1,6 +1,7 @@
 import { ofetch } from 'ofetch'
 import type { ClientConfig, ClientResponse } from './typesNew'
-import { projectsManager } from './managers'
+import { projectsManager, servicesManager } from './managers'
+import { monitorManager } from './managers/MonitorManager'
 
 let token = ''
 
@@ -48,10 +49,12 @@ export function easypanel(config: ClientConfig) {
   const resolvedClient = client(config)
 
   const projects = projectsManager(resolvedClient)
-  const services = projectsManager(resolvedClient)
+  const services = servicesManager(resolvedClient)
+  const monitor = monitorManager(resolvedClient)
 
   return {
     projects,
     services,
+    monitor,
   }
 }
