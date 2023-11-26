@@ -1,10 +1,10 @@
 import type { RestResponse } from '.'
 
 export type AdvancedStats = RestResponse<{
-  cpu: { value: string; time: string }[]
-  disk: { value: string; time: string }[]
-  memory: { value: string; time: string }[]
-  network: { value: { input: number; output: number }; time: string }[]
+  cpu: { value: string, time: string }[]
+  disk: { value: string, time: string }[]
+  memory: { value: string, time: string }[]
+  network: { value: { input: number, output: number }, time: string }[]
 }>
 
 export type DockerTaskStats = RestResponse<{
