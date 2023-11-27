@@ -18,13 +18,13 @@ function client(config: ClientConfig): ClientResponse {
     retryDelay: 1000, // ms
   })
 
-  function get<T>(route: string, body: any): Promise<T> {
+  function get<T>(route: string, input?: any): Promise<T> {
     return customClient(route, {
       method: 'GET',
       headers: {
         Authorization: token,
       },
-      body: JSON.stringify(body),
+      params: input,
     })
   }
 

@@ -44,7 +44,11 @@ export function services({ get, post }: ClientResponse) {
     body: SelectService,
   ) {
     const Route = routes.services(serviceType).Inspect
-    const res = await get<ServiceRes>(Route, { json: body })
+    const res = await get<ServiceRes>(Route, { input: {
+      input: {
+        json: body,
+      },
+    } })
     return res
   }
 
@@ -256,8 +260,10 @@ export function services({ get, post }: ClientResponse) {
     const service = `${body.projectName}_${body.serviceName}`
     const res = await get<StringResponse>(routes.services('').GetServiceLogs, {
       json: {
-        service,
-        lines: 50,
+        input: {
+          service,
+          lines: 50,
+        },
       },
     })
 

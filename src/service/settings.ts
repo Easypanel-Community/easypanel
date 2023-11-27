@@ -26,7 +26,9 @@ export function settings({ get, post }: ClientResponse) {
    */
   async function getGithubToken(): Promise<StringResponse> {
     const res = await get<StringResponse>(routes.settings.GetGithubToken, {
-      json: null,
+      input: {
+        json: null,
+      },
     })
     return res
   }
@@ -37,21 +39,29 @@ export function settings({ get, post }: ClientResponse) {
   async function getLetsEncryptEmail(): Promise<StringResponse> {
     const res = await get<StringResponse>(
       routes.settings.GetLetsEncryptEmail,
-      { json: null },
+      {
+        input: {
+          json: null,
+        },
+      },
     )
     return res
   }
 
   async function getPanelDomain(): Promise<PanelDomainRes> {
     const res = await get<PanelDomainRes>(routes.settings.GetPanelDomain, {
-      json: null,
+      input: {
+        json: null,
+      },
     })
     return res
   }
 
   async function getServerIp(): Promise<StringResponse> {
     const res = await get<StringResponse>(routes.settings.GetServerIp, {
-      json: null,
+      input: {
+        json: null,
+      },
     })
     return res
   }
@@ -60,7 +70,9 @@ export function settings({ get, post }: ClientResponse) {
     const res = await get<StringResponse>(
       routes.settings.GetTraefikCustomConfig,
       {
-        json: null,
+        input: {
+          json: null,
+        },
       },
     )
     return res
