@@ -1,5 +1,5 @@
 export interface ClientResponse {
-  get: <T>(route: string, body: any) => Promise<T>
+  get: <T>(route: string, input?: any) => Promise<T>
   post: <T>(route: string, body: any) => Promise<T>
   token: string
 }

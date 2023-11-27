@@ -8,5 +8,10 @@ const app = easypanel({
   token: process.env.EASYPANEL_TOKEN || '',
 })
 
-const dd = await app.projects.create({ name: 'ttt' })
-console.warn(dd)
+// const dd = await app.projects.create({ name: 'ttt' })
+// console.warn(dd)
+
+const response = await app.projects.inspect({
+  projectName: 'projects',
+})
+console.warn(response)

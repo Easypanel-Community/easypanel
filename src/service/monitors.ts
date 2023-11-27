@@ -10,28 +10,36 @@ import { routes } from '../utils/routes'
 export function monitor({ get }: ClientResponse) {
   async function getAdvancedStats() {
     const res = await get<AdvancedStats>(routes.monitor.GetAdvancedStats, {
-      json: null,
+      input: {
+        json: null,
+      },
     })
     return res
   }
 
   async function getDockerTaskStats() {
     const res = await get<DockerTaskStats>(routes.monitor.GetDockerTaskStats, {
-      json: null,
+      input: {
+        json: null,
+      },
     })
     return res
   }
 
   async function getMonitorTableData() {
     const res = await get<ContainerStats>(routes.monitor.GetMonitorTableData, {
-      json: null,
+      input: {
+        json: null,
+      },
     })
     return res
   }
 
   async function getSystemStats() {
     const res = await get<SystemStats>(routes.monitor.GetSystemStats, {
-      json: null,
+      input: {
+        json: null,
+      },
     })
     return res
   }

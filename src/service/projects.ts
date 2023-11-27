@@ -15,7 +15,9 @@ import type {
 export function projects({ get, post }: ClientResponse) {
   async function canCreate() {
     const res = await get<CanCreate>(routes.projets.CanCreate, {
-      json: null,
+      input: {
+        json: null,
+      },
     })
     return res
   }
@@ -37,21 +39,27 @@ export function projects({ get, post }: ClientResponse) {
 
   async function inspect(body: ProjectQueryConf) {
     const res = await get<Project>(routes.projets.Inspect, {
-      json: body,
+      input: {
+        json: body,
+      },
     })
     return res
   }
 
   async function list() {
     const res = await get<ListProjects>(routes.projets.List, {
-      json: null,
+      input: {
+        json: null,
+      },
     })
     return res
   }
 
   async function listWithServices() {
     const res = await get<ListWithServices>(routes.projets.ListWithServices, {
-      json: null,
+      input: {
+        json: null,
+      },
     })
     return res
   }
