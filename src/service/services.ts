@@ -259,9 +259,11 @@ export function services({ get, post }: ClientResponse) {
   async function getServiceLogs(body: SelectService) {
     const service = `${body.projectName}_${body.serviceName}`
     const res = await get<StringResponse>(routes.services('').GetServiceLogs, {
-      input: {
-        service,
-        lines: 50,
+      json: {
+        input: {
+          service,
+          lines: 50,
+        },
       },
     })
 
