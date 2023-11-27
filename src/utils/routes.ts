@@ -1,5 +1,5 @@
 // Completed
-const Projets = {
+const projets = {
   List: '/api/trpc/projects.listProjects', // GET
   ListWithServices: '/api/trpc/projects.listProjectsAndServices', // GET
   CanCreate: '/api/trpc/projects.canCreateProject', // POST
@@ -8,7 +8,7 @@ const Projets = {
   Destroy: '/api/trpc/projects.destroyProject', // POST
 }
 
-function Services(type: string) {
+function services(type: string) {
   const Routes = {
     Create: '/api/trpc/services.app.createService', // POST
     Inspect: '/api/trpc/services.app.inspectService', // GET
@@ -43,7 +43,7 @@ function Services(type: string) {
 }
 
 // Completed
-const Monitor = {
+const monitor = {
   GetAdvancedStats: '/api/trpc/monitor.getAdvancedStats', // GET
   GetSystemStats: '/api/trpc/monitor.getSystemStats', // GET
   GetDockerTaskStats: '/api/trpc/monitor.getDockerTaskStats', // GET
@@ -51,14 +51,14 @@ const Monitor = {
 }
 
 // Completed
-const Auth = {
+const auth = {
   GetUser: '/api/trpc/auth.getUser', // GET
   Logout: '/api/trpc/auth.logout', // POST
   Login: '/api/trpc/auth.login', // POST
 }
 
 // Completed
-function License(type: string) {
+function license(type: string) {
   const Routes = {
     Get: '/api/trpc/portalLicense.getLicensePayload', // GET
     Activate: '/api/trpc/portalLicense.activate', // POST
@@ -71,7 +71,7 @@ function License(type: string) {
 }
 
 // Completed
-const Settings = {
+const settings = {
   RestartEasypanel: '/api/trpc/settings.restartEasypanel', // POST
   GetServerIp: '/api/trpc/settings.getServerIp', // GET
   RefreshServerIp: '/api/trpc/settings.refreshServerIp', // POST
@@ -90,11 +90,11 @@ const Settings = {
   ChangeCredentials: '/api/trpc/settings.changeCredentials', // POST
 }
 
-export const Routes = {
-  Projets,
-  Services,
-  Monitor,
-  Auth,
-  License,
-  Settings,
+export const routes = {
+  projets,
+  services,
+  monitor,
+  auth,
+  license,
+  settings,
 }

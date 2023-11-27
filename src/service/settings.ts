@@ -11,11 +11,11 @@ import type {
   StringResponse,
   TreafikConfParams,
 } from '../types'
-import { Routes } from '../utils/Routes'
+import { routes } from '../utils/routes'
 
-export function settingsManager({ get, post }: ClientResponse) {
+export function settings({ get, post }: ClientResponse) {
   async function changeCredentials(body: ChangeCredentialsParams): Promise<NoResponse> {
-    const res = await post<NoResponse>(Routes.Settings.ChangeCredentials, {
+    const res = await post<NoResponse>(routes.settings.ChangeCredentials, {
       json: body,
     })
     return res
@@ -25,7 +25,7 @@ export function settingsManager({ get, post }: ClientResponse) {
    * Returns github token
    */
   async function getGithubToken(): Promise<StringResponse> {
-    const res = await get<StringResponse>(Routes.Settings.GetGithubToken, {
+    const res = await get<StringResponse>(routes.settings.GetGithubToken, {
       json: null,
     })
     return res
@@ -36,21 +36,21 @@ export function settingsManager({ get, post }: ClientResponse) {
    */
   async function getLetsEncryptEmail(): Promise<StringResponse> {
     const res = await get<StringResponse>(
-      Routes.Settings.GetLetsEncryptEmail,
+      routes.settings.GetLetsEncryptEmail,
       { json: null },
     )
     return res
   }
 
   async function getPanelDomain(): Promise<PanelDomainRes> {
-    const res = await get<PanelDomainRes>(Routes.Settings.GetPanelDomain, {
+    const res = await get<PanelDomainRes>(routes.settings.GetPanelDomain, {
       json: null,
     })
     return res
   }
 
   async function getServerIp(): Promise<StringResponse> {
-    const res = await get<StringResponse>(Routes.Settings.GetServerIp, {
+    const res = await get<StringResponse>(routes.settings.GetServerIp, {
       json: null,
     })
     return res
@@ -58,7 +58,7 @@ export function settingsManager({ get, post }: ClientResponse) {
 
   async function getTraefikCustomConfig(): Promise<StringResponse> {
     const res = await get<StringResponse>(
-      Routes.Settings.GetTraefikCustomConfig,
+      routes.settings.GetTraefikCustomConfig,
       {
         json: null,
       },
@@ -68,7 +68,7 @@ export function settingsManager({ get, post }: ClientResponse) {
 
   async function pruneDockerBuilder(): Promise<StringResponse> {
     const res = await post<StringResponse>(
-      Routes.Settings.PruneDockerBuilder,
+      routes.settings.PruneDockerBuilder,
       {
         json: null,
       },
@@ -77,28 +77,28 @@ export function settingsManager({ get, post }: ClientResponse) {
   }
 
   async function pruneDockerImages(): Promise<StringResponse> {
-    const res = await post<StringResponse>(Routes.Settings.PruneDockerImages, {
+    const res = await post<StringResponse>(routes.settings.PruneDockerImages, {
       json: null,
     })
     return res
   }
 
   async function refreshServerIp(): Promise<NoResponse> {
-    const res = await post<NoResponse>(Routes.Settings.RefreshServerIp, {
+    const res = await post<NoResponse>(routes.settings.RefreshServerIp, {
       json: null,
     })
     return res
   }
 
   async function restartEasypanel(): Promise<NoResponse> {
-    const res = await post<NoResponse>(Routes.Settings.RestartEasypanel, {
+    const res = await post<NoResponse>(routes.settings.RestartEasypanel, {
       json: null,
     })
     return res
   }
 
   async function restartTraefik(): Promise<NoResponse> {
-    const res = await post<NoResponse>(Routes.Settings.RestartTraefik, {
+    const res = await post<NoResponse>(routes.settings.RestartTraefik, {
       json: null,
     })
     return res
@@ -108,7 +108,7 @@ export function settingsManager({ get, post }: ClientResponse) {
     body: PruneDockerDailyParams,
   ): Promise<BooleanResponse> {
     const res = await post<BooleanResponse>(
-      Routes.Settings.SetDockerPruneDaily,
+      routes.settings.SetDockerPruneDaily,
       {
         json: body,
       },
@@ -117,14 +117,14 @@ export function settingsManager({ get, post }: ClientResponse) {
   }
 
   async function setGithubToken(body: GithubTokenParams): Promise<StringResponse> {
-    const res = await post<StringResponse>(Routes.Settings.SetGithubToken, {
+    const res = await post<StringResponse>(routes.settings.SetGithubToken, {
       json: body,
     })
     return res
   }
 
   async function setPanelDomain(body: PanelDomainParams): Promise<NoResponse> {
-    const res = await post<NoResponse>(Routes.Settings.SetPanelDomain, {
+    const res = await post<NoResponse>(routes.settings.SetPanelDomain, {
       json: body,
     })
     return res
@@ -134,7 +134,7 @@ export function settingsManager({ get, post }: ClientResponse) {
     body: TreafikConfParams,
   ): Promise<NoResponse> {
     const res = await post<NoResponse>(
-      Routes.Settings.UpdateTraefikCustomConfig,
+      routes.settings.UpdateTraefikCustomConfig,
       {
         json: body,
       },
@@ -144,7 +144,7 @@ export function settingsManager({ get, post }: ClientResponse) {
 
   async function setLetsEncryptEmail(body: LetsEncryptParams): Promise<StringResponse> {
     const res = await post<StringResponse>(
-      Routes.Settings.setLetsEncryptEmail,
+      routes.settings.setLetsEncryptEmail,
       {
         json: body,
       },

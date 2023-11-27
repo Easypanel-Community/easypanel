@@ -5,32 +5,32 @@ import type {
   SystemStats,
 } from '../types/monitor'
 import type { ClientResponse } from '../types'
-import { Routes } from '../utils/Routes'
+import { routes } from '../utils/routes'
 
-export function monitorManager({ get }: ClientResponse) {
+export function monitor({ get }: ClientResponse) {
   async function getAdvancedStats() {
-    const res = await get<AdvancedStats>(Routes.Monitor.GetAdvancedStats, {
+    const res = await get<AdvancedStats>(routes.monitor.GetAdvancedStats, {
       json: null,
     })
     return res
   }
 
   async function getDockerTaskStats() {
-    const res = await get<DockerTaskStats>(Routes.Monitor.GetDockerTaskStats, {
+    const res = await get<DockerTaskStats>(routes.monitor.GetDockerTaskStats, {
       json: null,
     })
     return res
   }
 
   async function getMonitorTableData() {
-    const res = await get<ContainerStats>(Routes.Monitor.GetMonitorTableData, {
+    const res = await get<ContainerStats>(routes.monitor.GetMonitorTableData, {
       json: null,
     })
     return res
   }
 
   async function getSystemStats() {
-    const res = await get<SystemStats>(Routes.Monitor.GetSystemStats, {
+    const res = await get<SystemStats>(routes.monitor.GetSystemStats, {
       json: null,
     })
     return res

@@ -16,9 +16,9 @@ import type {
   UpdateRedirects,
   UpdateResources,
 } from '../types/services'
-import { Routes } from '../utils/Routes'
+import { routes } from '../utils/routes'
 
-export function servicesManager({ get, post }: ClientResponse) {
+export function services({ get, post }: ClientResponse) {
   /**
    * Creates a new service.
    */
@@ -31,7 +31,7 @@ export function servicesManager({ get, post }: ClientResponse) {
         host: '$(EASYPANEL_DOMAIN)',
       },
     ]
-    const Route = Routes.Services(serviceType).Create
+    const Route = routes.services(serviceType).Create
     const res = await post<ServiceRes>(Route, { json: body })
     return res
   }
@@ -43,7 +43,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: SelectService,
   ) {
-    const Route = Routes.Services(serviceType).Inspect
+    const Route = routes.services(serviceType).Inspect
     const res = await get<ServiceRes>(Route, { json: body })
     return res
   }
@@ -55,7 +55,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: SelectService,
   ) {
-    const Route = Routes.Services(serviceType).Destroy
+    const Route = routes.services(serviceType).Destroy
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -67,7 +67,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: SelectService,
   ) {
-    const Route = Routes.Services(serviceType).Deploy
+    const Route = routes.services(serviceType).Deploy
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -79,7 +79,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: SelectService,
   ) {
-    const Route = Routes.Services(serviceType).Disable
+    const Route = routes.services(serviceType).Disable
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -91,7 +91,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: SelectService,
   ) {
-    const Route = Routes.Services(serviceType).Enable
+    const Route = routes.services(serviceType).Enable
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -103,7 +103,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: SelectService,
   ) {
-    const Route = Routes.Services(serviceType).RefreshDeployToken
+    const Route = routes.services(serviceType).RefreshDeployToken
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -115,7 +115,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: UpdateGithub,
   ) {
-    const Route = Routes.Services(serviceType).UpdateSourceGithub
+    const Route = routes.services(serviceType).UpdateSourceGithub
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -127,7 +127,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: UpdateGit,
   ) {
-    const Route = Routes.Services(serviceType).UpdateSourceGit
+    const Route = routes.services(serviceType).UpdateSourceGit
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -139,7 +139,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: UpdateImage,
   ) {
-    const Route = Routes.Services(serviceType).UpdateSourceImage
+    const Route = routes.services(serviceType).UpdateSourceImage
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -151,7 +151,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: UpdateBuild,
   ) {
-    const Route = Routes.Services(serviceType).UpdateBuild
+    const Route = routes.services(serviceType).UpdateBuild
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -163,7 +163,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: UpdateEnv,
   ) {
-    const Route = Routes.Services(serviceType).UpdateEnv
+    const Route = routes.services(serviceType).UpdateEnv
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -175,7 +175,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: CreateService,
   ) {
-    const Route = Routes.Services(serviceType).UpdateDomains
+    const Route = routes.services(serviceType).UpdateDomains
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -187,7 +187,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: UpdateRedirects,
   ) {
-    const Route = Routes.Services(serviceType).UpdateRedirects
+    const Route = routes.services(serviceType).UpdateRedirects
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -199,7 +199,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: UpdateBasicAuth,
   ) {
-    const Route = Routes.Services(serviceType).UpdateBasicAuth
+    const Route = routes.services(serviceType).UpdateBasicAuth
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -211,7 +211,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: MountParams,
   ) {
-    const Route = Routes.Services(serviceType).UpdateMounts
+    const Route = routes.services(serviceType).UpdateMounts
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -223,7 +223,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: UpdatePorts,
   ) {
-    const Route = Routes.Services(serviceType).UpdatePorts
+    const Route = routes.services(serviceType).UpdatePorts
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -235,7 +235,7 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: UpdateResources,
   ) {
-    const Route = Routes.Services(serviceType).UpdateResources
+    const Route = routes.services(serviceType).UpdateResources
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
@@ -247,14 +247,14 @@ export function servicesManager({ get, post }: ClientResponse) {
     serviceType: ServiceType,
     body: DeployParams,
   ) {
-    const Route = Routes.Services(serviceType).UpdateDeploy
+    const Route = routes.services(serviceType).UpdateDeploy
     const res = await post<NoResponse>(Route, { json: body })
     return res
   }
 
   async function getServiceLogs(body: SelectService) {
     const service = `${body.projectName}_${body.serviceName}`
-    const res = await get<StringResponse>(Routes.Services('').GetServiceLogs, {
+    const res = await get<StringResponse>(routes.services('').GetServiceLogs, {
       json: {
         service,
         lines: 50,

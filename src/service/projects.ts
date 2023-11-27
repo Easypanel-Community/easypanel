@@ -1,4 +1,4 @@
-import { Routes } from '../utils/Routes'
+import { routes } from '../utils/routes'
 
 import type {
   CanCreate,
@@ -12,16 +12,16 @@ import type {
   ProjectQueryConf,
 } from '../types'
 
-export function projectsManager({ get, post }: ClientResponse) {
+export function projects({ get, post }: ClientResponse) {
   async function canCreate() {
-    const res = await get<CanCreate>(Routes.Projets.CanCreate, {
+    const res = await get<CanCreate>(routes.projets.CanCreate, {
       json: null,
     })
     return res
   }
 
   async function create(body: ProjectName) {
-    const Route = Routes.Projets.Create.replace('app', body.name)
+    const Route = routes.projets.Create.replace('app', body.name)
     const res = await post<Create>(Route, {
       json: body,
     })
@@ -29,28 +29,28 @@ export function projectsManager({ get, post }: ClientResponse) {
   }
 
   async function destory(body: ProjectName) {
-    const res = await post<NoResponse>(Routes.Projets.Destroy, {
+    const res = await post<NoResponse>(routes.projets.Destroy, {
       json: body,
     })
     return res
   }
 
   async function inspect(body: ProjectQueryConf) {
-    const res = await get<Project>(Routes.Projets.Inspect, {
+    const res = await get<Project>(routes.projets.Inspect, {
       json: body,
     })
     return res
   }
 
   async function list() {
-    const res = await get<ListProjects>(Routes.Projets.List, {
+    const res = await get<ListProjects>(routes.projets.List, {
       json: null,
     })
     return res
   }
 
   async function listWithServices() {
-    const res = await get<ListWithServices>(Routes.Projets.ListWithServices, {
+    const res = await get<ListWithServices>(routes.projets.ListWithServices, {
       json: null,
     })
     return res
