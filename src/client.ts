@@ -1,4 +1,4 @@
-import { ofetch } from 'ofetch'
+import { $fetch } from 'ofetch'
 import type { ClientConfig, ClientResponse, NoResponse, UserRes } from './types'
 import { monitorManager, projectsManager, servicesManager, settingsManager } from './managers'
 import { Routes } from './utils/Routes'
@@ -8,7 +8,7 @@ let token = ''
 function client(config: ClientConfig): ClientResponse {
   token = config.token
 
-  const customClient = ofetch.create({
+  const customClient = $fetch.create({
     headers: {
       'Content-Type': 'application/json',
       'Authorization': config.token,
