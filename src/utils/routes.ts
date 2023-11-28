@@ -90,6 +90,10 @@ const settings = {
   ChangeCredentials: '/api/trpc/settings.changeCredentials', // POST
 }
 
+const templates = {
+  CreateFromSchema: '/api/trpc/templates.createFromSchema', // POST
+}
+
 export const routes = {
   projets,
   services,
@@ -97,4 +101,5 @@ export const routes = {
   auth,
   license,
   settings,
+  templates,
 }

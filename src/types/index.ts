@@ -28,6 +28,7 @@ export type * from './monitor'
 export type * from './projects'
 export type * from './services'
 export type * from './settings'
+export type * from './templates'
 
 export interface ClientConfig {
   endpoint: string
